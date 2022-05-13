@@ -2,6 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+  }
+
   compileSdkVersion rootProject.ext.compileSdkVersion
   buildToolsVersion rootProject.ext.buildToolsVersion
 
@@ -30,4 +35,4 @@ dependencies {
   testImplementation deps.kotlin
 }
 
-apply from: rootProject.file('gradle/maven_push.gradle')
+//apply from: rootProject.file('gradle/maven_push.gradle')
